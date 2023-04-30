@@ -26,7 +26,7 @@ env:
   REPO_BRANCH: master
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
-  UPLOAD_RELEASE: true
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:
@@ -183,17 +183,17 @@ jobs:
 
         # LuCI插件选择:
         cat >> .config <<EOF
-        CONFIG_PACKAGE_luci-app-alist=y
+        # CONFIG_PACKAGE_luci-app-alist=y
         CONFIG_PACKAGE_luci-app-passwall=y
         CONFIG_PACKAGE_luci-app-diskman=y
         CONFIG_PACKAGE_luci-app-autoreboot=y
         CONFIG_PACKAGE_luci-app-ddns=y
-        CONFIG_PACKAGE_luci-app-filetransfer=y
-        CONFIG_PACKAGE_luci-app-speedlimit=y
+        # CONFIG_PACKAGE_luci-app-filetransfer=y
+        # CONFIG_PACKAGE_luci-app-speedlimit=y
         CONFIG_PACKAGE_luci-app-nlbwmon=y
         CONFIG_PACKAGE_luci-app-firewall=y
-        CONFIG_PACKAGE_luci-app-ssr-plus=y
-        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+        # CONFIG_PACKAGE_luci-app-ssr-plus=y
+        # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
         CONFIG_PACKAGE_luci-app-serverchan=y
         CONFIG_PACKAGE_luci-app-pptp-server=y
         CONFIG_PACKAGE_luci-app-smartdns=y
@@ -209,7 +209,18 @@ jobs:
         CONFIG_PACKAGE_luci-app-vlmcsd=y
         CONFIG_PACKAGE_luci-app-zerotier=y
         CONFIG_PACKAGE_luci-app-adguardhome=y
-        CONFIG_PACKAGE_luci-app-sqm=y
+        CONFIG_PACKAGE_luci-app-guest-wifi=y
+        CONFIG_PACKAGE_luci-app-mosdns=y
+        CONFIG_PACKAGE_luci-app-easymesh=y
+        CONFIG_PACKAGE_luci-app-eqos=y
+        # CONFIG_PACKAGE_luci-app-sqm=y
+        CONFIG_PACKAGE_luci-app-turboacc=y
+        CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_OFFLOADING=y
+        CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_BBR_CCA=y
+        CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_PDNSD=y
+        CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSFORWARDER=y
+        CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSPROXY=y
+        CONFIG_PACKAGE_luci-app-wifischedule=y
         EOF
 
         # LuCI主题:
