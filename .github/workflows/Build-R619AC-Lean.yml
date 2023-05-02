@@ -209,10 +209,10 @@ jobs:
         CONFIG_PACKAGE_luci-app-vsftpd=y
         CONFIG_PACKAGE_luci-app-vlmcsd=y
         CONFIG_PACKAGE_luci-app-zerotier=y
-        # CONFIG_PACKAGE_luci-app-adguardhome=y
+        CONFIG_PACKAGE_luci-app-adguardhome=y
         CONFIG_PACKAGE_luci-app-guest-wifi=y
         CONFIG_PACKAGE_luci-app-mosdns=y
-        CONFIG_PACKAGE_luci-app-easymesh=y
+        # CONFIG_PACKAGE_luci-app-easymesh=y
         CONFIG_PACKAGE_luci-app-eqos=y
         # CONFIG_PACKAGE_luci-app-sqm=y
         CONFIG_PACKAGE_luci-app-turboacc=y
@@ -221,7 +221,7 @@ jobs:
         CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_PDNSD=y
         CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSFORWARDER=y
         CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSPROXY=y
-        # CONFIG_PACKAGE_luci-app-wifischedule=y
+        CONFIG_PACKAGE_luci-app-wifischedule=y
         CONFIG_PACKAGE_luci-app-advanced=y
         EOF
 
