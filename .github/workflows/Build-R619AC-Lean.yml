@@ -82,7 +82,8 @@ jobs:
         #git clone https://github.com/fw876/helloworld
         git clone -b lede https://github.com/pymumu/luci-app-smartdns
         svn export https://github.com/immortalwrt/packages/trunk/net/smartdns
-        #git clone https://github.com/gngpp/luci-theme-design
+        git clone https://github.com/gngpp/luci-theme-design
+        git clone https://github.com/gngpp/luci-app-design-config
         #svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
         #svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
         svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
@@ -227,6 +228,7 @@ jobs:
         CONFIG_PACKAGE_luci-app-advanced=y
         CONFIG_PACKAGE_luci-app-openclash=y
         CONFIG_PACKAGE_luci-app-iptvhelper=y
+        CONFIG_PACKAGE_luci-app-design-config=y
         EOF
 
         # LuCI主题:
@@ -244,6 +246,7 @@ jobs:
         # CONFIG_PACKAGE_odhcpd is not set
         # CONFIG_luci-app-samba is not set
         # CONFIG_PACKAGE_luci-app-unblockmusic is not set
+        # CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go is not set
         EOF
 
         # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
