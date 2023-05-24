@@ -97,6 +97,7 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-iptvhelper
         svn export https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
         svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos package/luci-app-eqos
+        git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
 
     - name: FilePatch
       run: |
@@ -216,7 +217,7 @@ jobs:
         CONFIG_PACKAGE_luci-app-adguardhome=y
         CONFIG_PACKAGE_luci-app-guest-wifi=y
         CONFIG_PACKAGE_luci-app-mosdns=y
-        # CONFIG_PACKAGE_luci-app-easymesh=y
+        CONFIG_PACKAGE_luci-app-easymesh=y
         CONFIG_PACKAGE_luci-app-eqos=y
         CONFIG_PACKAGE_luci-app-sqm=y
         CONFIG_PACKAGE_luci-app-turboacc=y
@@ -230,6 +231,8 @@ jobs:
         CONFIG_PACKAGE_luci-app-openclash=y
         CONFIG_PACKAGE_luci-app-iptvhelper=y
         CONFIG_PACKAGE_luci-app-design-config=y
+        CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
+        
         EOF
 
         # LuCI主题:
