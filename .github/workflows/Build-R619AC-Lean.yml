@@ -84,8 +84,9 @@ jobs:
         svn export https://github.com/immortalwrt/packages/trunk/net/smartdns
         git clone https://github.com/gngpp/luci-theme-design
         git clone https://github.com/gngpp/luci-app-design-config
-        git clone https://github.com/jerrykuku/luci-theme-argon
-        git clone https://github.com/jerrykuku/luci-app-argon-config
+        # git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+        git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon-1 && mv -n luci-theme-argon-1/luci-theme-argon  ./; rm -rf luci-theme-argon-1
+        git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
         #svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
         #svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
         svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
@@ -99,7 +100,7 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-iptvhelper
         svn export https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
         svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos package/luci-app-eqos
-        git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
+        git clone --branch master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
 
     - name: FilePatch
       run: |
