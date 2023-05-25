@@ -84,8 +84,8 @@ jobs:
         svn export https://github.com/immortalwrt/packages/trunk/net/smartdns
         git clone https://github.com/gngpp/luci-theme-design
         git clone https://github.com/gngpp/luci-app-design-config
-        # git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-        git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon-1 && mv -n luci-theme-argon-1/luci-theme-argon  ./; rm -rf luci-theme-argon-1
+        git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+        # git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon-1 && mv -n luci-theme-argon-1/luci-theme-argon  ./; rm -rf luci-theme-argon-1
         git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
         #svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
         #svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
