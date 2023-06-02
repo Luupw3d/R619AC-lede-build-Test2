@@ -100,6 +100,8 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
         svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos package/luci-app-eqos
         git clone --branch master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
+        src-git autotimeset  https://github.com/sirpdboy/luci-app-autotimeset
+        git clone https://github.com/sirpdboy/luci-app-wizard
 
     - name: FilePatch
       run: |
@@ -236,6 +238,8 @@ jobs:
         # CONFIG_PACKAGE_luci-theme-argon=y
         # CONFIG_PACKAGE_luci-theme-argon-config=y
         CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
+        CONFIG_PACKAGE_luci-app-autotimeset=y
+        CONFIG_PACKAGE_luci-app-wizard=y
         
         EOF
 
