@@ -367,7 +367,7 @@ jobs:
       uses: Luupw3d/delete-workflow-runs@main
       with:
         retain_days: 1
-        keep_minimum_runs: 30
+        keep_minimum_runs: 3
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.1
