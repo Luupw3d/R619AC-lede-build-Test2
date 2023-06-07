@@ -100,8 +100,8 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
         svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos package/luci-app-eqos
         git clone --branch master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
-        git clone https://github.com/sirpdboy/luci-app-autotimeset
-        git clone https://github.com/sirpdboy/luci-app-wizard
+        # git clone https://github.com/sirpdboy/luci-app-autotimeset
+        # git clone https://github.com/sirpdboy/luci-app-wizard
 
     - name: FilePatch
       run: |
@@ -238,8 +238,8 @@ jobs:
         # CONFIG_PACKAGE_luci-theme-argon=y
         # CONFIG_PACKAGE_luci-theme-argon-config=y
         CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
-        CONFIG_PACKAGE_luci-app-autotimeset=y
-        CONFIG_PACKAGE_luci-app-wizard=y
+        # CONFIG_PACKAGE_luci-app-autotimeset=y
+        # CONFIG_PACKAGE_luci-app-wizard=y
         
         EOF
 
@@ -364,13 +364,13 @@ jobs:
           > ${{ env.MD5 }}
 
     - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+      uses: Luupw3d/delete-workflow-runs@main
       with:
         retain_days: 1
-        keep_minimum_runs: 3
+        keep_minimum_runs: 30
 
     - name: Remove old Releases
-      uses: dev-drprasad/delete-older-releases@v0.1.0
+      uses: dev-drprasad/delete-older-releases@v0.2.1
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
         keep_latest: 180
