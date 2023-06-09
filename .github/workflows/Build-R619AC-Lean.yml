@@ -102,7 +102,7 @@ jobs:
         git clone --branch master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
         #git clone https://github.com/sirpdboy/luci-app-autotimeset
         git clone https://github.com/Luupw3d/luci-app-autotimeset
-        git clone https://github.com/sirpdboy/luci-app-wizard
+        git clone https://github.com/sirpdboy/luci-app-netwizard
 
     - name: FilePatch
       run: |
@@ -240,7 +240,7 @@ jobs:
         # CONFIG_PACKAGE_luci-theme-argon-config=y
         CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
         CONFIG_PACKAGE_luci-app-autotimeset=y
-        CONFIG_PACKAGE_luci-app-wizard=y
+        CONFIG_PACKAGE_luci-app-netwizard=y
         
         EOF
 
