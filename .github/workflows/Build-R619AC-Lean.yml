@@ -84,8 +84,8 @@ jobs:
         svn export https://github.com/immortalwrt/packages/trunk/net/smartdns
         git clone https://github.com/gngpp/luci-theme-design
         git clone https://github.com/gngpp/luci-app-design-config
-        # git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-        # git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+        git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+        git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config
         #svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
         #svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
         svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
@@ -235,9 +235,6 @@ jobs:
         CONFIG_PACKAGE_luci-app-advanced=y
         CONFIG_PACKAGE_luci-app-openclash=y
         CONFIG_PACKAGE_luci-app-iptvhelper=y
-        CONFIG_PACKAGE_luci-app-design-config=y
-        # CONFIG_PACKAGE_luci-theme-argon=y
-        # CONFIG_PACKAGE_luci-theme-argon-config=y
         CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
         CONFIG_PACKAGE_luci-app-autotimeset=y
         CONFIG_PACKAGE_luci-app-netwizard=y
@@ -247,7 +244,10 @@ jobs:
         # LuCI主题:
         cat >> .config <<EOF
         CONFIG_PACKAGE_luci-theme-design=y
+        CONFIG_PACKAGE_luci-app-design-config=y
         CONFIG_PACKAGE_luci-theme-bootstrap=y
+        CONFIG_PACKAGE_luci-theme-argon=y
+        CONFIG_PACKAGE_luci-app-argon-config=y
         EOF
 
         # 常用软件包:
