@@ -94,7 +94,7 @@ jobs:
         git clone -b luci https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
         svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-diskman
         svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome
-        #svn export https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
+        svn export https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
         git clone https://github.com/sirpdboy/luci-app-advanced
         svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-iptvhelper
         svn export https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
@@ -103,6 +103,8 @@ jobs:
         #git clone https://github.com/sirpdboy/luci-app-autotimeset
         git clone https://github.com/Luupw3d/luci-app-autotimeset
         git clone https://github.com/sirpdboy/luci-app-netwizard
+        svn export https://github.com/kenzok8/small-package/trunk/msd_lite
+        svn export https://github.com/kenzok8/small-package/trunk/luci-app-msd_lite
 
     - name: FilePatch
       run: |
@@ -238,7 +240,9 @@ jobs:
         CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
         CONFIG_PACKAGE_luci-app-autotimeset=y
         CONFIG_PACKAGE_luci-app-netwizard=y
-        
+        CONFIG_PACKAGE_luci-app-passwall2=y
+        CONFIG_PACKAGE_luci-app-msd_lite=y
+
         EOF
 
         # LuCI主题:
