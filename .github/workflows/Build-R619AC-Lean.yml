@@ -112,7 +112,12 @@ jobs:
         git clone https://github.com/lisaac/luci-app-diskman
         git clone https://github.com/rufengsuixing/luci-app-adguardhome
         git clone https://github.com/Huangjoe123/luci-app-eqos
-        git clone https://github.com/kenzok8/small
+        git clone https://github.com/kenzok8/small/trunk/chinadns-ng
+        git clone https://github.com/kenzok8/small/trunk/dns2socks
+        git clone https://github.com/kenzok8/small/trunk/dns2tcp
+        git clone https://github.com/kenzok8/small/trunk/microsocks
+        git clone https://github.com/kenzok8/small/trunk/tcping
+        git clone https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon
 
 
     - name: FilePatch
